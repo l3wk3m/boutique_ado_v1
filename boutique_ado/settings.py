@@ -25,7 +25,7 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-l3wk3m-boutiqueadov1-slheso6f3mj.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['https://8000-l3wk3m-boutiqueadov1-slheso6f3mj.ws.codeinstitute-ide.net/']
 
 
 # Application definition
@@ -118,12 +118,16 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+ #     'default': {
+ #         'ENGINE': 'django.db.backends.sqlite3',
+ #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #     }
+ # }
+     
+ DATABASES = {
+     'default': dj_database_url.parse('postgres://uxo3hooruft:eI0IJJmFqYQQ@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/start_flyer_alien_54509')
+ }
 
 
 # Password validation
